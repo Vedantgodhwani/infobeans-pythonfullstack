@@ -1,0 +1,192 @@
+Here are the Python solutions for each of the logic systems described. These use standard `if-elif-else` structures to ensure accuracy and readability.
+
+---
+
+### 1. Electricity Department Billing System
+```python
+units = int(input("Enter units consumed: "))
+if units <= 100:
+    bill = units * 5
+elif units <= 200:
+    bill = (100 * 5) + (units - 100) * 7
+else:
+    bill = (100 * 5) + (100 * 7) + (units - 200) * 10
+print(f"Total Electricity Bill: ₹{bill}")
+```
+
+### 2. College Result Processing System
+```python
+marks = int(input("Enter marks: "))
+if marks >= 90:
+    print("Grade: A")
+elif marks >= 75:
+    print("Grade: B")
+elif marks >= 60:
+    print("Grade: C")
+elif marks >= 50:
+    print("Grade: D")
+else:
+    print("Fail")
+```
+
+### 3. Income Tax Department System
+```python
+income = int(input("Enter annual income: "))
+if income <= 250000:
+    tax = 0
+elif income <= 500000:
+    tax = (income - 250000) * 0.05
+elif income <= 1000000:
+    tax = (250000 * 0.05) + (income - 500000) * 0.20
+else:
+    tax = (250000 * 0.05) + (500000 * 0.20) + (income - 1000000) * 0.30
+print(f"Tax Payable: ₹{tax}")
+```
+
+### 4. E-Commerce Discount Engine
+```python
+amount = int(input("Enter purchase amount: "))
+if amount > 5000:
+    discount = 0.20
+elif amount >= 2000:
+    discount = 0.10
+else:
+    discount = 0.05
+final = amount - (amount * discount)
+print(f"Final Amount: ₹{int(final)}")
+```
+
+### 5. Cinema Ticket Booking System
+```python
+age = int(input("Enter age: "))
+if age < 12:
+    print("Ticket Price: ₹100")
+elif age <= 60:
+    print("Ticket Price: ₹200")
+else:
+    print("Ticket Price: ₹150")
+```
+
+### 6. Company Bonus Distribution System
+```python
+salary = int(input("Enter salary: "))
+exp = int(input("Enter years of experience: "))
+if exp > 10:
+    bonus = salary * 0.20
+elif exp >= 5:
+    bonus = salary * 0.10
+elif exp >= 2:
+    bonus = salary * 0.05
+else:
+    bonus = 0
+print(f"Bonus Amount: ₹{int(bonus)}")
+```
+
+### 7. Banking Withdrawal Limit System
+```python
+balance = int(input("Enter account balance: "))
+if balance < 1000:
+    print("Withdrawal not allowed")
+elif balance <= 5000:
+    print("Maximum withdrawal ₹1000")
+else:
+    print("Maximum withdrawal ₹5000")
+```
+
+### 8. Weather Monitoring System
+```python
+temp = int(input("Enter temperature: "))
+if temp < 0:
+    print("Weather Condition: Freezing")
+elif temp <= 20:
+    print("Weather Condition: Cold")
+elif temp <= 35:
+    print("Weather Condition: Warm")
+else:
+    print("Weather Condition: Hot")
+```
+
+### 9. Student Attendance Eligibility System
+```python
+attendance = int(input("Enter attendance percentage: "))
+if attendance >= 75:
+    print("Status: Eligible")
+elif attendance >= 60:
+    print("Status: Eligible with warning")
+else:
+    print("Status: Not Eligible")
+```
+
+### 10. Mobile Data Plan Advisor
+```python
+usage = float(input("Enter daily data usage: "))
+if usage > 3:
+    print("Recommended Plan: Premium Plan")
+elif usage >= 1:
+    print("Recommended Plan: Standard Plan")
+else:
+    print("Recommended Plan: Basic Plan")
+```
+
+### 11. Railway Ticket Fare System
+```python
+dist = int(input("Enter distance: "))
+travel_class = input("Enter class (Sleeper/AC): ").lower()
+if dist <= 100:
+    fare = 100 if travel_class == "sleeper" else 200
+elif dist <= 500:
+    fare = 300 if travel_class == "sleeper" else 600
+else:
+    fare = 500 if travel_class == "sleeper" else 1000
+print(f"Total Fare: ₹{fare}")
+```
+
+### 12. Restaurant Bill with GST System
+```python
+bill = int(input("Enter bill amount: "))
+if bill <= 1000:
+    gst = 0.05
+elif bill <= 5000:
+    gst = 0.12
+else:
+    gst = 0.18
+
+total = bill + (bill * gst)
+if bill > 3000:
+    total += 200
+print(f"Final Bill Amount: ₹{int(total)}")
+```
+
+### 13. Employee Performance Appraisal System
+```python
+salary = int(input("Enter salary: "))
+rating = int(input("Enter rating: "))
+hike_map = {5: 0.25, 4: 0.20, 3: 0.10, 2: 0.05, 1: 0}
+hike = hike_map.get(rating, 0)
+revised = salary + (salary * hike)
+if salary < 20000 and rating >= 4:
+    revised += 2000
+print(f"Revised Salary: ₹{int(revised)}")
+```
+
+### 14. Online Course Fee System
+```python
+category = input("Enter course category: ").lower()
+user = input("Enter user type: ").lower()
+fees = {"programming": 5000, "design": 4000, "marketing": 3000}
+price = fees.get(category, 0)
+discount = 0.20 if user == "student" else (0.10 if user == "working professional" else 0)
+final = price - (price * discount)
+print(f"Final Course Fee: ₹{int(final)}")
+```
+
+### 15. Smart Parking System
+```python
+v_type = input("Enter vehicle type: ").lower()
+hours = int(input("Enter hours parked: "))
+rates = {"bike": 10, "car": 20, "bus": 50}
+total = rates.get(v_type, 0) * hours
+if hours > 5:
+    total += 100
+print(f"Total Parking Fee: ₹{total}")
+```

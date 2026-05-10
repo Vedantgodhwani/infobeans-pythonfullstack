@@ -1,0 +1,166 @@
+Here are the solutions for each logic puzzle, implemented in Python using loops and conditional logic.
+
+---
+
+## 1. Product of Odd Numbers up to N
+```python
+n = int(input())
+product = 1
+for i in range(1, n + 1, 2):
+    product *= i
+print(product)
+```
+
+---
+
+## 2. Count Numbers Divisible by 7
+```python
+start, end = map(int, input().split())
+count = 0
+for i in range(start, end + 1):
+    if i % 7 == 0:
+        count += 1
+print(f"Count = {count}")
+```
+
+---
+
+## 3. Display Numbers Ending with 5
+```python
+start, end = map(int, input().split())
+results = []
+for i in range(start, end + 1):
+    if i % 10 == 5:
+        results.append(str(i))
+print(" ".join(results))
+```
+
+---
+
+## 4. Strong Number Checker
+```python
+num = int(input())
+temp = num
+total_sum = 0
+
+while temp > 0:
+    digit = temp % 10
+    # Calculate factorial of digit
+    fact = 1
+    for i in range(1, digit + 1):
+        fact *= i
+    total_sum += fact
+    temp //= 10
+
+if total_sum == num:
+    print("Strong Number")
+else:
+    print("Not a Strong Number")
+```
+
+---
+
+## 5. Harshad Number Checker
+```python
+num = int(input())
+temp = num
+digit_sum = 0
+
+while temp > 0:
+    digit_sum += temp % 10
+    temp //= 10
+
+if num % digit_sum == 0:
+    print("Harshad Number")
+else:
+    print("Not a Harshad Number")
+```
+
+---
+
+## 6. Automorphic Number Checker
+```python
+num = int(input())
+square = num * num
+temp = num
+divisor = 1
+
+# Find divisor to extract last digits (e.g., 10 for 1-digit, 100 for 2-digits)
+while temp > 0:
+    divisor *= 10
+    temp //= 10
+
+if square % divisor == num:
+    print("Automorphic Number")
+else:
+    print("Not an Automorphic Number")
+```
+
+---
+
+## 7. Duck Number Checker
+```python
+n_str = input()
+if n_str[0] == '0':
+    print("Not a Duck Number")
+else:
+    has_zero = False
+    for digit in n_str:
+        if digit == '0':
+            has_zero = True
+            break
+    if has_zero:
+        print("Duck Number")
+    else:
+        print("Not a Duck Number")
+```
+
+---
+
+## 8. Mirror Difference Transaction Verification
+```python
+id_str = input()
+original = int(id_str)
+
+# Reverse logic
+reverse = int(id_str[::-1])
+diff = abs(original - reverse)
+digits_count = len(str(diff))
+
+print(f"Reverse = {reverse}")
+print(f"Difference = {diff}")
+print(f"Digits = {digits_count}")
+
+if diff == 0:
+    print("Perfect Match")
+elif diff % 9 == 0:
+    print("Verified")
+else:
+    print("Rejected")
+```
+
+---
+
+## 9. Step Difference Number Analyzer
+```python
+num_str = input()
+num_len = len(num_str)
+diffs = []
+
+for i in range(num_len - 1):
+    d1 = int(num_str[i])
+    d2 = int(num_str[i+1])
+    diffs.append(abs(d1 - d2))
+
+total_sum = sum(diffs)
+largest = max(diffs) if diffs else 0
+
+print("Step Differences:", " ".join(map(str, diffs)))
+print(f"Sum = {total_sum}")
+print(f"Largest = {largest}")
+
+if total_sum % num_len == 0:
+    print("Balanced Number")
+else:
+    print("Unbalanced Number")
+```

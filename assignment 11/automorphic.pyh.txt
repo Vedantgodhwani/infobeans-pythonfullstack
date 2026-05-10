@@ -1,0 +1,14 @@
+num = int(input())
+square = num * num
+temp = num
+divisor = 1
+
+# Find divisor to extract last digits (e.g., 10 for 1-digit, 100 for 2-digits)
+while temp > 0:
+    divisor *= 10
+    temp //= 10
+
+if square % divisor == num:
+    print("Automorphic Number")
+else:
+    print("Not an Automorphic Number")

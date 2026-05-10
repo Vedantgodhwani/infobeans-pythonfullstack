@@ -1,0 +1,273 @@
+Here are the Python implementations for each of the 10 logic systems. These scripts use nested `if-elif-else` structures to mirror the decision trees described in your prompt.
+
+---
+
+### 1. Smart Credit Card Approval System
+```python
+income = 45000
+credit_score = 720
+employment = "private"
+debt = 10000
+
+if income >= 50000:
+    if credit_score >= 750:
+        if debt < 20000:
+            print("Card Type = Premium Card")
+        else:
+            print("Card Type = Gold Card")
+    else:
+        if employment == "government" and credit_score >= 650:
+            print("Card Type = Gold Card")
+        else:
+            print("Card Type = Reject")
+else:
+    if income >= 30000 and credit_score >= 700:
+        print("Card Type = Silver Card")
+    else:
+        print("Card Type = Reject")
+```
+
+---
+
+### 2. Hospital Emergency Priority System
+```python
+age = 65
+severity = "critical"
+insurance = True
+
+if severity == "critical":
+    if age >= 60:
+        print("Treatment = Immediate ICU")
+    else:
+        print("Treatment = Emergency Ward")
+elif severity == "moderate":
+    if insurance:
+        print("Treatment = Priority Treatment")
+    else:
+        print("Treatment = General Queue")
+elif severity == "low":
+    if age < 10:
+        print("Treatment = Pediatric Priority")
+    else:
+        print("Treatment = Wait")
+```
+
+---
+
+### 3. Smart Scholarship Allocation System
+```python
+marks = 88
+income = 250000
+category = "OBC"
+
+if marks >= 85:
+    if income <= 300000:
+        if category.lower() != "general":
+            print("Scholarship = Full Scholarship")
+        else:
+            print("Scholarship = 75% Scholarship")
+    else:
+        print("Scholarship = 50% Scholarship")
+elif 70 <= marks <= 84:
+    if income <= 200000:
+        print("Scholarship = 50% Scholarship")
+    else:
+        print("Scholarship = 25% Scholarship")
+else:
+    print("Scholarship = No Scholarship")
+```
+
+---
+
+### 4. Airline Ticket Pricing Engine
+```python
+travel_class = "economy"
+distance = 1200
+booking = "early"
+
+if travel_class == "business":
+    if distance > 1000:
+        print("Ticket Price = 8000")
+    else:
+        print("Ticket Price = 5000")
+elif travel_class == "economy":
+    if distance > 1000:
+        if booking == "early":
+            print("Ticket Price = 4000")
+        else:
+            print("Ticket Price = 5000")
+    else:
+        print("Ticket Price = 2500")
+```
+
+---
+
+### 5. Smart Exam Evaluation System
+```python
+marks = 38
+attendance = 80
+internal = 26
+
+if marks >= 40:
+    if attendance >= 75:
+        if internal >= 20:
+            print("Result = Pass")
+        else:
+            print("Result = Grace Pass")
+    else:
+        print("Result = Detained")
+else:
+    if marks >= 35 and internal >= 25:
+        print("Result = Reappear")
+    else:
+        print("Result = Fail")
+```
+
+---
+
+### 6. Banking Fraud Detection System
+```python
+amount = 70000
+location = "international"
+device = "new"
+transactions = 4
+unusual_activity = True # Example flag for the else block
+
+if amount >= 50000:
+    if location == "international":
+        if device == "new":
+            if transactions > 3:
+                print("Risk Level = High Risk (Blocked)")
+            else:
+                print("Risk Level = Medium Risk")
+        else:
+            print("Risk Level = Medium Risk")
+    elif location == "domestic":
+        if transactions > 5:
+            print("Risk Level = Medium Risk")
+        else:
+            print("Risk Level = Low Risk")
+else:
+    if unusual_activity:
+        if device == "new":
+            print("Risk Level = Medium Risk")
+        else:
+            print("Risk Level = Low Risk")
+    else:
+        print("Risk Level = Safe")
+```
+
+---
+
+### 7. University Result Classification System
+```python
+marks = 78
+backlogs = 0
+project = 85
+
+if marks >= 75:
+    if backlogs == 0:
+        if project >= 80:
+            print("Result = First Class with Distinction")
+        else:
+            print("Result = First Class")
+    else:
+        print("Result = First Class")
+elif 60 <= marks <= 74:
+    if backlogs <= 2:
+        print("Result = Second Class")
+    else:
+        print("Result = Pass Class")
+elif 50 <= marks <= 59:
+    print("Result = Pass")
+else:
+    print("Result = Fail")
+```
+
+---
+
+### 8. E-Commerce Dynamic Pricing System
+```python
+demand = 85
+stock = 40
+user_type = "premium"
+festival = True
+
+if demand >= 80:
+    if stock < 50:
+        if user_type == "premium":
+            if festival:
+                print("Discount = 20%")
+            else:
+                print("Discount = 10%")
+        else:
+            print("Discount = No Discount")
+    else:
+        print("Discount = 5%")
+elif 40 <= demand <= 79:
+    if festival:
+        print("Discount = 10%")
+    else:
+        print("Discount = No Discount")
+else:
+    if stock > 200:
+        print("Discount = 15%")
+    else:
+        print("Discount = No Discount")
+```
+
+---
+
+### 9. Smart Loan Eligibility System
+```python
+salary = 50000
+age = 30
+credit_score = 760
+emi = 18000
+
+if salary >= 40000:
+    if 21 <= age <= 60:
+        if credit_score >= 750:
+            if emi <= (0.4 * salary):
+                print("Loan Status = Approved at 8%")
+            else:
+                print("Loan Status = Approved at 10%")
+        elif credit_score >= 650:
+            print("Loan Status = Approved at 12%")
+        else:
+            print("Loan Status = Reject")
+else:
+    if salary >= 25000 and credit_score >= 700:
+        print("Loan Status = Approved at 13%")
+    else:
+        print("Loan Status = Reject")
+```
+
+---
+
+### 10. Military Recruitment Fitness System
+```python
+age = 23
+bmi = 22
+running_time = 14
+medical = "fit"
+
+if 18 <= age <= 25:
+    if 18 <= bmi <= 25:
+        if running_time <= 15:
+            if medical == "fit":
+                print("Selection Status = Selected")
+            else:
+                print("Selection Status = Medical Reject")
+        else:
+            print("Selection Status = Physical Fail")
+    else:
+        print("Selection Status = BMI Fail")
+elif 26 <= age <= 30:
+    if running_time <= 14 and medical == "fit":
+        print("Selection Status = Conditional Selection")
+    else:
+        print("Selection Status = Reject")
+else:
+    print("Selection Status = Not Eligible")
+```

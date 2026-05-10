@@ -1,0 +1,24 @@
+num_str = input("Enter Number: ")
+processed_str = ""
+count = 0
+found_zero = False
+
+index = len(num_str) - 1
+while index >= 0:
+    current_digit = num_str[index]
+    
+    if current_digit == '0':
+        found_zero = True
+        break
+    else:
+        processed_str += current_digit + " "
+        count += 1
+    index -= 1
+
+print(f"Digits Processed: {processed_str.strip()}")
+print(f"Count = {count}")
+
+if found_zero:
+    print("Zero Found - Process Stopped")
+else:
+    print("No Zero Found")

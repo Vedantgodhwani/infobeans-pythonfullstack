@@ -1,0 +1,161 @@
+Here are the solutions for all 8 assignments, strictly using **Nested if-else statements** as requested.
+
+---
+
+### 1. Bank Loan Approval System
+```python
+salary = 40000
+credit_score = 720
+existing_loans = 1
+
+if salary >= 30000:
+    if credit_score >= 750:
+        print("Loan Status = Approved")
+    else:
+        if existing_loans < 2:
+            print("Loan Status = Conditional Approval")
+        else:
+            print("Loan Status = Rejected")
+else:
+    print("Loan Status = Rejected")
+```
+
+### 2. E-Commerce Discount Engine
+```python
+cart_value = 6000
+user_type = "Premium"
+
+if cart_value >= 5000:
+    if user_type == "Premium":
+        final_amount = cart_value * 0.80
+    else:
+        final_amount = cart_value * 0.90
+else:
+    if cart_value >= 2000:
+        final_amount = cart_value * 0.95
+    else:
+        final_amount = cart_value
+
+print(f"Final Amount = {final_amount}")
+```
+
+### 3. Electricity Monitoring System
+```python
+units = 220
+
+if units >= 100:
+    if units >= 300:
+        print("Usage Category = High Usage")
+    else:
+        if units >= 200:
+            print("Usage Category = Moderate Usage")
+        else:
+            print("Usage Category = Normal Usage")
+else:
+    print("Usage Category = Low Usage")
+```
+
+### 4. Gym Plan Advisor
+```python
+age = 25
+weight = 85
+goal = "weight loss"
+
+if age >= 18:
+    if weight >= 80:
+        if goal == "weight loss":
+            print("Plan = Cardio Plan")
+        else:
+            print("Plan = Strength Plan")
+    else:
+        print("Plan = General Fitness Plan")
+else:
+    print("Not Allowed")
+```
+
+### 5. ATM Withdrawal System
+```python
+balance = 20000
+withdrawal_amount = 8000
+pin_status = "correct"
+
+if balance >= withdrawal_amount:
+    if withdrawal_amount <= 10000:
+        if pin_status == "correct":
+            print("Transaction Successful")
+        else:
+            print("Invalid PIN")
+    else:
+        print("Limit Exceeded")
+else:
+    print("Insufficient Balance")
+```
+
+### 6. Movie Ticket Pricing
+```python
+age = 25
+show_time = "evening"
+day_type = "weekend"
+
+if age < 18:
+    if show_time == "morning":
+        price = 100
+    else:
+        price = 150
+else:
+    if show_time == "evening":
+        if day_type == "weekend":
+            price = 300
+        else:
+            price = 250
+    else:
+        price = 200
+
+print(f"Ticket Price = {price}")
+```
+
+### 7. Employee Bonus Calculator
+```python
+experience = 6
+rating = 4
+salary = 40000
+
+if experience >= 5:
+    if rating >= 4:
+        if salary < 50000:
+            bonus = salary * 0.20
+        else:
+            bonus = salary * 0.10
+    else:
+        bonus = salary * 0.05
+else:
+    bonus = 0
+
+print(f"Bonus = {bonus}")
+```
+
+### 8. Warehouse Stock Finder
+*(Note: To find the maximum of 6 numbers using only nested if-else without loops or `max()`, we compare them step-by-step.)*
+
+```python
+u1, u2, u3, u4, u5, u6 = 120, 450, 300, 275, 500, 390
+
+if u1 >= u2 and u1 >= u3 and u1 >= u4 and u1 >= u5 and u1 >= u6:
+    highest = u1
+else:
+    if u2 >= u3 and u2 >= u4 and u2 >= u5 and u2 >= u6:
+        highest = u2
+    else:
+        if u3 >= u4 and u3 >= u5 and u3 >= u6:
+            highest = u3
+        else:
+            if u4 >= u5 and u4 >= u6:
+                highest = u4
+            else:
+                if u5 >= u6:
+                    highest = u5
+                else:
+                    highest = u6
+
+print(f"Highest Stock = {highest}")
+```

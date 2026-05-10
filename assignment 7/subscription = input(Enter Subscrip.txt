@@ -1,0 +1,23 @@
+subscription = input("Enter Subscription (premium/basic/none): ").lower()
+progress = int(input("Enter Course Progress (%): "))
+test_score = int(input("Enter Test Score: "))
+
+if subscription == "premium":
+    if progress >= 80:
+        if test_score >= 70:
+            access_status = "Unlock Certificate"
+        else:
+            access_status = "Allow Retry"
+    else:
+        access_status = "Complete Course"
+
+elif subscription == "basic":
+    if progress >= 50:
+        access_status = "Limited Access"
+    else:
+        access_status = "Lock Content"
+
+else:
+    access_status = "Deny Access"
+
+print(f"Course Status = {access_status}")

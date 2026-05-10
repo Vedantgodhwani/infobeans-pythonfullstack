@@ -1,0 +1,109 @@
+Understood. Here is the Python code for all 10 scenarios. Each one uses independent `if` statements to ensure that multiple conditions can be met and printed simultaneously.
+
+---
+
+### 1. Smart Voting & ID Verification System
+```python
+age = int(input("Enter age: "))
+id_proof = input("Do you have ID (yes/no): ").lower()
+
+if age >= 18:
+    print("Eligible to vote")
+if id_proof == "yes":
+    print("Allowed inside booth")
+```
+
+### 2. Student Performance Analyzer
+```python
+marks = int(input("Enter marks: "))
+
+if marks >= 40:
+    print("Pass")
+if marks >= 75:
+    print("Distinction")
+```
+
+### 3. E-Commerce Offer Engine
+```python
+cart_value = int(input("Enter cart value: "))
+
+if cart_value >= 500:
+    print("Free delivery applied")
+if cart_value >= 1000:
+    print("Discount coupon unlocked")
+```
+
+### 4. Gym Membership Eligibility Checker
+```python
+age = int(input("Enter age: "))
+bmi = float(input("Enter BMI: "))
+
+if age >= 18:
+    print("Gym access granted")
+if bmi > 25:
+    print("Enroll in weight loss program")
+```
+
+### 5. Banking Security System
+```python
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+if username == "admin":
+    print("Valid user")
+if len(password) >= 8:
+    print("Strong password")
+```
+
+### 6. Weather Monitoring System
+```python
+temp = int(input("Enter temperature: "))
+humidity = int(input("Enter humidity: "))
+
+if temp >= 30:
+    print("Hot day")
+if humidity >= 70:
+    print("High humidity alert")
+```
+
+### 7. Salary Benefits System
+```python
+salary = int(input("Enter salary: "))
+
+if salary >= 30000:
+    print("PF applicable")
+if salary >= 50000:
+    print("Bonus applicable")
+```
+
+### 8. Number Property Checker
+```python
+num = int(input("Enter number: "))
+
+if num % 2 == 0:
+    print("Even number")
+if num % 5 == 0:
+    print("Divisible by 5")
+```
+
+### 9. Library Access System
+
+membership = input("Membership active (yes/no): ").lower()
+books_issued = int(input("Books issued: "))
+
+if membership == "yes":
+    print("Entry allowed")
+if books_issued < 3:
+    print("Can issue more books")
+```
+
+### 10. Online Exam System
+```python
+marks = int(input("Enter marks: "))
+attendance = int(input("Enter attendance: "))
+
+if marks >= 40:
+    print("Pass")
+if attendance >= 75:
+    print("Eligible for certificate")
+```

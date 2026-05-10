@@ -1,0 +1,5 @@
+a,b,c=map(int,input("enter a,b,c :").split(maxsplit=2))
+print(a)
+print(c)
+print(b)
+print(F"THE VALUES ARE",{a},{b},{c})
